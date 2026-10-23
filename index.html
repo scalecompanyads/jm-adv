@@ -7,11 +7,13 @@
 <meta name="description" content="Orientação jurídica para inventário judicial e extrajudicial, regularização de imóveis herdados e partilha de bens entre herdeiros. Fale com a JM Advogados pelo WhatsApp.">
 <meta name="theme-color" content="#1b2130">
 <link rel="icon" type="image/png" href="assets/favicon.png">
-<link rel="preload" as="image" href="assets/hero-heranca.webp">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400..600;1,6..72,400..500&family=Instrument+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="preload" as="image" href="assets/hero-heranca-1200.webp" imagesrcset="assets/hero-heranca-800.webp 800w, assets/hero-heranca-1200.webp 1200w, assets/hero-heranca-1672.webp 1672w" imagesizes="100vw" fetchpriority="high">
+<link rel="preload" as="font" type="font/woff2" href="assets/fonts/newsreader.woff2" crossorigin>
+<link rel="preload" as="font" type="font/woff2" href="assets/fonts/instrument-sans.woff2" crossorigin>
 <style>
+@font-face{font-family:"Newsreader";font-style:normal;font-weight:400 600;font-display:swap;src:url(assets/fonts/newsreader.woff2) format("woff2")}
+@font-face{font-family:"Newsreader";font-style:italic;font-weight:400 500;font-display:swap;src:url(assets/fonts/newsreader-italic.woff2) format("woff2")}
+@font-face{font-family:"Instrument Sans";font-style:normal;font-weight:400 600;font-display:swap;src:url(assets/fonts/instrument-sans.woff2) format("woff2")}
 :root{
   --navy:#1b2130;
   --navy-2:#242c3e;
@@ -49,8 +51,8 @@ em.gold{font-style:italic;color:var(--gold-deep)}
 
 /* CTA */
 .cta{position:relative;overflow:hidden;isolation:isolate;display:inline-flex;align-items:center;justify-content:center;gap:12px;min-height:58px;padding:16px 30px;border-radius:999px;border:1px solid #9a7022;background:linear-gradient(180deg,#fbeab0 0%,#ecc977 20%,#cf9f42 46%,#b7862b 54%,#d6ac55 78%,#f2d68e 100%);color:#2a1c04;font-weight:600;font-size:16px;line-height:1.25;text-decoration:none;text-align:center;text-shadow:0 1px 0 rgba(255,241,205,.55);box-shadow:inset 0 1px 0 rgba(255,255,255,.75),inset 0 -2px 5px rgba(110,70,8,.35),0 12px 28px -12px rgba(176,126,36,.8),0 2px 4px rgba(0,0,0,.18);transition:transform .25s ease,box-shadow .25s ease,filter .25s ease}
-.cta::after{content:"";position:absolute;top:0;bottom:0;left:-70%;width:45%;background:linear-gradient(100deg,transparent 0%,rgba(255,255,255,.6) 50%,transparent 100%);transform:skewX(-22deg);animation:ctaShine 5s ease-in-out infinite;z-index:-1;pointer-events:none}
-@keyframes ctaShine{0%,62%{left:-70%}100%{left:130%}}
+.cta::after{content:"";position:absolute;top:0;bottom:0;left:0;width:45%;background:linear-gradient(100deg,transparent 0%,rgba(255,255,255,.6) 50%,transparent 100%);transform:translateX(-160%) skewX(-22deg);will-change:transform;animation:ctaShine 5s ease-in-out infinite;z-index:-1;pointer-events:none}
+@keyframes ctaShine{0%,62%{transform:translateX(-160%) skewX(-22deg)}100%{transform:translateX(300%) skewX(-22deg)}}
 .cta:hover{transform:translateY(-2px);filter:brightness(1.05);box-shadow:inset 0 1px 0 rgba(255,255,255,.75),inset 0 -2px 5px rgba(110,70,8,.35),0 18px 34px -12px rgba(176,126,36,.9),0 2px 4px rgba(0,0,0,.18)}
 .cta svg{flex:none;width:22px;height:22px}
 .text-link{display:inline-flex;align-items:center;gap:10px;font-weight:600;color:var(--gold-deep);text-decoration:none;border-bottom:1px solid currentColor;padding-bottom:3px}
@@ -123,7 +125,7 @@ p strong,.path li strong,.person li strong{font-weight:600;color:var(--text)}
 
 /* ---------- 4. ETAPAS ---------- */
 .steps{background:var(--ink);color:var(--on-dark);padding:clamp(64px,12vh,120px) 0;position:relative;overflow:hidden}
-.steps::before{content:"";position:absolute;right:-6%;top:50%;width:560px;height:470px;transform:translateY(-50%);background:url(assets/logo-jm.webp) center/contain no-repeat;opacity:.05;pointer-events:none}
+.steps::before{content:"";position:absolute;right:-6%;top:50%;width:560px;height:470px;transform:translateY(-50%);background:url(assets/logo-jm-560.webp) center/contain no-repeat;opacity:.05;pointer-events:none}
 .steps-head{text-align:center;margin-bottom:clamp(40px,7vh,64px)}
 .steps-head h2{margin-left:auto;margin-right:auto}
 .steps-foot{display:flex;flex-direction:column;align-items:center;gap:18px;text-align:center;margin-top:clamp(40px,7vh,60px)}
@@ -303,10 +305,10 @@ footer{background:var(--navy-deep);color:var(--on-dark-muted);padding:40px 0 cal
 
 <!-- 1. HERO -->
 <section class="hero on-dark" id="topo">
-  <div class="hero-media"><img src="assets/hero-heranca.webp" alt="Mãos sobre documentos antigos e chaves de casa em uma mesa de madeira" width="1672" height="941" fetchpriority="high"></div>
+  <div class="hero-media"><img src="assets/hero-heranca-1200.webp" srcset="assets/hero-heranca-800.webp 800w, assets/hero-heranca-1200.webp 1200w, assets/hero-heranca-1672.webp 1672w" sizes="100vw" alt="Mãos sobre documentos antigos e chaves de casa em uma mesa de madeira" width="1672" height="941" fetchpriority="high" decoding="async"></div>
   <div class="wrap">
     <a class="brand" href="#topo" aria-label="Jessica C. Tomé e Makley C. A. Oliveira Advogados">
-      <img src="assets/logo-jm.webp" alt="" width="480" height="397">
+      <img src="assets/logo-jm-128.webp" alt="" width="128" height="104">
       <span>Jessica C. Tomé<br>Makley C. A. Oliveira<small>Advogados</small></span>
     </a>
     <div class="hero-copy">
@@ -318,7 +320,7 @@ footer{background:var(--navy-deep);color:var(--on-dark-muted);padding:40px 0 cal
         Falar com um advogado
       </a>
       <div class="lawyers">
-        <span class="av"><img src="assets/av-jessica.webp" alt="" width="160" height="160"><img src="assets/av-makley.webp" alt="" width="160" height="160"></span>
+        <span class="av"><img src="assets/av-jessica.webp" alt="" width="160" height="160" decoding="async"><img src="assets/av-makley.webp" alt="" width="160" height="160" decoding="async"></span>
         <p><b>Atendimento direto com os advogados</b>Jessica C. Tomé e Makley C. A. Oliveira</p>
       </div>
     </div>
@@ -443,7 +445,7 @@ footer{background:var(--navy-deep);color:var(--on-dark-muted);padding:40px 0 cal
 <section class="team on-dark" aria-labelledby="t-team">
   <div class="wrap team-grid">
     <figure class="team-photo rv" style="margin:0">
-      <img src="assets/socios.webp" alt="Makley C. A. Oliveira e Jessica C. Tomé, advogados sócios da JM" width="1024" height="1280">
+      <img src="assets/socios-600.webp" srcset="assets/socios-600.webp 600w, assets/socios-1024.webp 1024w" sizes="(max-width:900px) 90vw, 40vw" alt="Makley C. A. Oliveira e Jessica C. Tomé, advogados sócios da JM" width="1024" height="1280" loading="lazy" decoding="async">
     </figure>
     <div class="rv">
       <span class="eyebrow">Quem conduz o seu caso</span>
@@ -522,7 +524,7 @@ footer{background:var(--navy-deep);color:var(--on-dark-muted);padding:40px 0 cal
 
 <!-- 8. CTA FINAL -->
 <section class="final on-dark" aria-labelledby="t-final">
-  <div class="final-media"><img src="assets/jessica.webp" alt="Jessica C. Tomé, advogada sócia da JM" width="1024" height="1280"></div>
+  <div class="final-media"><img src="assets/jessica-600.webp" srcset="assets/jessica-600.webp 600w, assets/jessica-1024.webp 1024w" sizes="(max-width:900px) 100vw, 46vw" alt="Jessica C. Tomé, advogada sócia da JM" width="1024" height="1280" loading="lazy" decoding="async"></div>
   <div class="wrap">
     <div class="final-copy rv">
       <span class="eyebrow">Dê o primeiro passo hoje</span>
@@ -538,7 +540,7 @@ footer{background:var(--navy-deep);color:var(--on-dark-muted);padding:40px 0 cal
 
 <footer>
   <div class="wrap foot">
-    <a class="brand" href="#topo"><img src="assets/logo-jm.webp" alt="" width="480" height="397"><span>Jessica C. Tomé<br>Makley C. A. Oliveira<small>Advogados</small></span></a>
+    <a class="brand" href="#topo"><img src="assets/logo-jm-128.webp" alt="" width="128" height="104"><span>Jessica C. Tomé<br>Makley C. A. Oliveira<small>Advogados</small></span></a>
     <!-- PENDENTE: inserir OAB/UF dos sócios, registro da sociedade, endereço e CNPJ -->
     <p>JM Advogados · Inventário e Sucessões. Conteúdo de caráter informativo, que não substitui a análise individual do caso nem constitui promessa de&nbsp;resultado.</p>
   </div>
